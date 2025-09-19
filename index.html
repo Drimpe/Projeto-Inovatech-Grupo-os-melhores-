@@ -1,48 +1,49 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Áudio → Libras (com Hand Talk)</title>
-    <link rel="stylesheet" href="estilos.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Áudio → Libras (com Hand Talk)</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <h1>🎙 → 🤟Voz em Libras</h1>
-    </header>
+        <h1>🎙 → 🤟Voz em Libras</h1>
+    </header>
 
-  <main>
-    <section class="panel">
-      <h2>1) Gravação de Áudio</h2>
-      <div class="controls">
-        <button id="btnRec" class="btn rec">🎤 Nova Gravação</button>
-        <div class="status"><span id="recDot" class="dot"></span><span id="recStatus">Aguardando…</span></div>
-        <textarea id="asrOut" placeholder="O texto reconhecido aparecerá aqui…"></textarea>
-        <div class="row">
-          <button id="btnSendToLibras" class="btn">🤟Enviar para o Hand Talk</button>
-          <button id="btnClear" class="btn" title="Limpar">🧹Limpar</button>
-        </div>
-        <div class="legend">Dica: fale, edite o texto se precisar e clique em <span class="kbd">Enviar para o Hand Talk</span>. Em seguida, use o botão flutuante para traduzir a fala.</div>
-      </div>
-    </section>
+    <main>
+        <section class="panel">
+            <h2>1) Gravação de Áudio</h2>
+            <div class="controls">
+                <button id="btnRec" class="btn rec">🎤 Nova Gravação</button>
+                <div class="status"><span id="recDot" class="dot"></span><span id="recStatus">Aguardando…</span></div>
+                <textarea id="asrOut" placeholder="O texto reconhecido aparecerá aqui…"></textarea>
+                <div class="row">
+                    <button id="btnSendToLibras" class="btn">🤟Enviar para o Hand Talk</button>
+                    <button id="btnClear" class="btn" title="Limpar">🧹Limpar</button>
+                </div>
+              ""  <div class="legend">Dica: fale, edite o texto se precisar e clique em <span class="kbd">Enviar para o Hand Talk</span>. Em seguida, use o botão flutuante para traduzir a fala.</div>
+            </div>
+        </section>
 
-    <section class="panel">
-      <h2>2) Traduzir Para Libras</h2>
-      <div id="textoParaLibras" class="out" aria-live="polite">
-        <h3>Traduzir a Fala</h3>
-      </div>
-      <p class="legend" style="margin-top:8px">A Hand Talk traduz o <em>conteúdo textual</em> da página para Libras através do avatar. Clique no ícone flutuante à direita para abrir o tradutor.</p>
-    </section>
-  </main>
+        <section class="panel">
+            <h2>2) Traduzir Para Libras</h2>
+            <div id="textoParaLibras" class="out" aria-live="polite">
+                <h3>Traduzir a Fala</h3>
+            </div>
+            <p class="legend" style="margin-top:8px">A Hand Talk traduz o <em>conteúdo textual</em> da página para Libras através do avatar. Clique no ícone flutuante à direita para abrir o tradutor.</p>
+        </section>
+    </main>
+    
+    <footer>
+        <p>    ⚠ Observação: a tradução para Libras é realizada pela **Hand Talk**. Este app apenas transcreve o áudio e escreve o texto na página para o Hand Talk traduzir. Para uso educacional — Não substitui profissional intérprete de Libras.</p>
+    </footer>
 
-  <footer>
-    ⚠ Observação: a tradução para Libras é realizada pela **Hand Talk**. Este app apenas transcreve o áudio e escreve o texto na página para o Hand Talk traduzir. Para uso educacional — Não substitui profissional intérprete de Libras.
-  </footer>
 
-    <script>
+<script>
     (function () {
         var ht = document.createElement('script');
         ht.type = 'text/javascript';
@@ -53,7 +54,7 @@
     })();
 </script>
 
-  <script>
+<script>
   /***********************
    * Reconhecimento de fala (Web Speech API)
    ***********************/
@@ -163,6 +164,6 @@
     if(e.key==='Enter' && (e.ctrlKey||e.metaKey)) btnSend.click();
   });
   asrOut.placeholder = 'Ex.: "Olá, bom dia! Gostaria de saber o horário de atendimento."';
-  </script>
+</script>
 </body>
 </html>
