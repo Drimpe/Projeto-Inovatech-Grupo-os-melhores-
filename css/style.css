@@ -175,7 +175,7 @@ a { color: #174F7C; }
 
 /* Desktop */
 @media screen and (min-width: 1000px) {
-  .main {
+  main {
     grid-template-columns: 500px 1fr;
   }
 }
