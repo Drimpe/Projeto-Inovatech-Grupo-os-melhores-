@@ -29,15 +29,16 @@ export default function initWebSpeech() {
       let finalTranscript = '';
    
       recognition.onstart = () => {
-      isRecording = true;
-      btnRec.classList.add('active');
-      btnRec.textContent = '⏹Parar Gravação';
-      recStatus.textContent = 'Ouvindo… fale normalmente.';
-      recDot.className = 'dot ok';
+         isRecording = true;
+         btnRec.classList.add('active');
+         btnRec.textContent = '⏹Parar Gravação';
+         recStatus.textContent = 'Ouvindo… fale normalmente.';
+         recDot.className = 'dot ok';
       };
 
       recognition.onresult = (event) => {
          let interim = '';
+         let finalTranscript = '';
          for (let i = event.resultIndex; i < event.results.length; i++) {
             const transcript = event.results[i][0].transcript;
             if (event.results[i].isFinal) finalTranscript += transcript + ' ';

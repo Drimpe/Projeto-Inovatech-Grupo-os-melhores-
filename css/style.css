@@ -173,8 +173,8 @@ footer p {
 
 a { color: #174F7C; }
 
-
-@media screen and (min-width: 1200px) {
+/* Desktop */
+@media screen and (min-width: 1000px) {
   .main {
     grid-template-columns: 500px 1fr;
   }
