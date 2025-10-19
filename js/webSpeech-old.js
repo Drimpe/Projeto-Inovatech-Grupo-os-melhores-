@@ -46,10 +46,12 @@ export default function initWebSpeech() {
          }
          asrOut.value = (finalTranscript + interim).trim();
       };
+      
       recognition.onerror = (e) => {
          recStatus.textContent = 'Erro: ' + e.error;
          recDot.className = 'dot err';
       };
+
       recognition.onend = () => {
          isRecording = false;
          btnRec.classList.remove('active');

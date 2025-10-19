@@ -63,8 +63,8 @@
 .rec-status::before {
    content: "";
    display: inline-block;
-   width: 10px;
-   height: 10px;
+   width: 12px;
+   height: 12px;
    border-radius: 50%;
    margin-right: 5px;
 }
@@ -75,6 +75,10 @@
    
 .rec-status.error::before {
    background-color: var(--rc-err);
+}
+
+.rec-status.recording::before {
+   background-color: var(--rc-on);
 }
 
 .rec-text {
