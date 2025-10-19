@@ -13,13 +13,20 @@ export default function speechRecognition() {
          recStatus.classList.remove('waiting');
          recStatus.classList.add('error');
          recButton.disabled = true;
-         return 0;
+         return;
       }
 
       const recognition = new SpeechRec();
       recognition.lang = 'pt-BR';
+      recognition.continuous = true;
+      recognition.interimResults = true;
 
-      console.log(recognition);
+      let finalTranscript = '';
+
+      recognition.onstart = () => {
+         isRecording = true;
+
+      }
 
 
    }
