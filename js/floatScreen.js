@@ -1,8 +1,6 @@
-
 export default function initFloatScreen () {
-
-
    // Está "funcionando", mas tem um bug de criar barras de scroll horizontais e verticais. Vou corrigir isso outra hora...
+   
    function floatScreen(event) {
       let [X, Y] = [event.clientX, event.clientY];
       

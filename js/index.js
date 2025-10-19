@@ -1,11 +1,12 @@
 
-import initWebSpeech from "./webSpeech.js";
+
+import speechRecognition from "./SpeechRecognition.js";
 import initStatusAnim from "./recStatusAnim.js";
 import initFloatScreen from "./floatScreen.js";
 import initBodyAnimation from "./bodyAnimations.js";
 
-// initWebSpeech();
 
+speechRecognition();
 initBodyAnimation();
 initStatusAnim();
 initFloatScreen();

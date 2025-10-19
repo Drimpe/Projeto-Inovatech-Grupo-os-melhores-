@@ -1,0 +1,34 @@
+export default function speechRecognition() {
+   // let recognition = null;
+   let isRecording = false;
+
+   const recButton = document.querySelector('.rec-button');
+   const recStatus = document.querySelector('.rec-status');
+   
+   function Setup() {
+      const SpeechRec = window.SpeechRecognition || window.webkitSpeechRecognition;
+
+      if (!SpeechRec) {
+         recStatus.textContent = 'Reconhecimento de fala não suportado neste navegador.';
+         recStatus.classList.remove('waiting');
+         recStatus.classList.add('error');
+         recButton.disabled = true;
+         return 0;
+      }
+
+      const recognition = new SpeechRec();
+      recognition.lang = 'pt-BR';
+
+      console.log(recognition);
+
+
+   }
+   
+   Setup();
+
+
+   recButton.addEventListener("click", () => {
+      window.alert("INOVATECH");
+   })
+
+}

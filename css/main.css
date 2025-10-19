@@ -69,8 +69,12 @@
    margin-right: 5px;
 }
 
-.rec-status.rec-waiting::before {
+.rec-status.waiting::before {
    background-color: var(--rc-waiting);
+}
+   
+.rec-status.error::before {
+   background-color: var(--rc-err);
 }
 
 .rec-text {
