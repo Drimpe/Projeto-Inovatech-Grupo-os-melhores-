@@ -1,10 +1,10 @@
 
 
 import speechRecognition from "./SpeechRecognition.js";
-import initFloatScreen from "./floatScreen.js";
-import initBodyAnimation from "./bodyAnimations.js";
+import floatScreen from "./floatScreen.js";
+import bodyAnimation from "./bodyAnimations.js";
 
 
 speechRecognition();
-initBodyAnimation();
+bodyAnimation();
 initFloatScreen();

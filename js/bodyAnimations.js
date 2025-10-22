@@ -1,4 +1,4 @@
-export default function initBodyAnimation() {
+export default function bodyAnimation() {
    window.onload = () => {
       const body = document.querySelector('body');
       const recordingSection = document.querySelector('.recording-section');

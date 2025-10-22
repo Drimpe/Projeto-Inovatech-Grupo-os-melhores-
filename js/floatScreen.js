@@ -1,4 +1,4 @@
-export default function initFloatScreen () {
+export default function floatScreen() {
    // Está "funcionando", mas tem um bug de criar barras de scroll horizontais e verticais. Vou corrigir isso outra hora...
    
    function floatScreen(event) {
