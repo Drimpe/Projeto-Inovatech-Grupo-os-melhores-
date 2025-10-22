@@ -3,20 +3,35 @@ export default function floatScreen() {
    
    function floatScreen(event) {
       let [X, Y] = [event.clientX, event.clientY];
+      let rightDistance = window.innerWidth - outputLibras.offsetLeft - outputLibras.offsetWidth;
+
+      // console.log(rightDistance);
+      outputLibras.style.top = `${Y}px`;
+      outputLibras.style.left = `${X}px`;
       
-      outputLibras.style.top = `${Y - 20}px`;
-      outputLibras.style.left = `${X - 20}px`;
+      // if (rightDistance > 10){
+      // }
+      // else {
+      //    console.log(X);
+      //    // outputLibras.style.left = `${rightDistance}px`;
+      //    // outputLibras.style.left = `${X + 10}px`;
+      // }     
+
+
+      if (X == window.innerWidth - outputLibras.offsetWidth) {
+         window.alert("TEST");
+      }
    }
 
    function mouseDown() {
       document.body.addEventListener('mousemove', floatScreen);
-      outputLibras.addEventListener('mouseup', mouseUp);
+      document.body.addEventListener('mouseup', mouseUp);
       outputLibras.classList.add('float-mode');
    }
 
    function mouseUp() {
       document.body.removeEventListener('mousemove', floatScreen);
-      outputLibras.removeEventListener('mouseup', mouseUp);
+      document.body.addEventListener('mouseup', mouseUp);
       // outputLibras.classList.remove('float-mode');
    }
 
