@@ -3,6 +3,7 @@ body {
    background-attachment: fixed;
    background-size: cover;
    background-repeat: no-repeat;
+   background-color: #F5F5F5;
 }
 
 .background-blur {
@@ -11,5 +12,5 @@ body {
    width: 100%;
    top: 0;
    bottom: 0;
-   background-color: #060e184d;
+   background-color: #060e184d;  
 }
