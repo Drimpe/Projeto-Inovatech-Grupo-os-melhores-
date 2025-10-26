@@ -27,11 +27,12 @@
    z-index: 1;
 }
 
-.recording-section h1, .output-libras-section h1 {
+.main h1 {
    font-family: "Nunito Sans", sans-serif;
-   font-weight: 500;
+   font-weight: 600;
    font-size: 1.25rem;
    text-align: center;
+   color: var(--b1);
 }
 
 .button {
@@ -47,7 +48,7 @@
 }
 
 .button:active {
-   transform: scale(1.05)
+   transform: scale(1.05);
 }
 
 .rec-status{
@@ -141,7 +142,7 @@
       justify-content: center;
       align-items: center;
       gap: 100px;
-      padding: 0;
+      padding-top: 100px;
    }
 
    .recording-section, .output-libras-section  {
