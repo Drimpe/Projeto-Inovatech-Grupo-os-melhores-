@@ -1,0 +1,7 @@
+services:
+  web:
+    build: .
+    ports:
+      - "0.0.0.0:80:80"
+    container_name: Inovatech
+    restart: unless-stopped
