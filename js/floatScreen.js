@@ -28,5 +28,16 @@ export default function floatScreen() {
    }
 
    const outputLibras = document.querySelector('.output-libras-section');
-   outputLibras.addEventListener('mousedown', mouseDown);
+   // outputLibras.addEventListener('mousedown', mouseDown);
+
+   function createPopUp() {
+      const popupDiv = document.createElement('div');
+      
+
+   }
+
+
+   const floatButton = document.querySelector('.float-button');
+
+   floatButton.addEventListener('click', createPopUp);
 } 

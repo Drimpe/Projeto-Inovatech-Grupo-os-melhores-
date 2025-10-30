@@ -9,6 +9,13 @@
    background-color: var(--b1);
    display: flex;
    justify-content: space-between;
+   align-items: center;
+}
+
+.header-logo {
+   height: 80px;
+   /* margin: auto; */
+   width: auto; 
 }
 
 /* .header-title {
@@ -31,14 +38,14 @@
    transition: .2s;
 }
 
-.header-menu li {
+.header-menu li a {
    transition: .25s;
    border-bottom: 2px solid transparent;
    padding-bottom: 2px;
    font-weight: 400;
 }
 
-.header-menu li:hover {
+.header-menu li a:hover {
    border-color: var(--w1);
 }
 
@@ -49,11 +56,9 @@
       display: none;
    }
 
-   .header-title {
-      font-size: 2rem;
-      padding: 1rem;
-      position: relative;
-      width: initial;
+   .header-logo {
+      height: 100px;
+      width: auto;
    }
 
    .header-menu {
