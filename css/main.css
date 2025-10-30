@@ -123,19 +123,7 @@
 }
 
 .float-button {
-   all: unset;
-   background-image: url("../img/float.svg");
-   width: 40px;
-   height: 40px;
-   background-size: cover;
-   background-repeat: no-repeat;
-   background-position: center;
-   position: absolute;
-   right: 0px;
-   top: 0px;
-   cursor: pointer;
-   background-color: var(--g1);
-   border-radius: 0px 5px 0px 5px;
+   display: none;
 }
 
 .float-button:active {
@@ -167,7 +155,27 @@
       justify-content: center;
       align-items: center;
       gap: 100px;
-      padding-top: 100px;
+      padding-top: 60px;
+   }
+
+   .float-button {
+      all: unset;
+      background-image: url("../img/float.svg");
+      width: 32px;
+      height: 32px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      position: absolute;
+      right: 0px;
+      top: 0px;
+      cursor: pointer;
+      background-color: var(--g1);
+      border-radius: 0px 5px 0px 5px;
+   }
+
+   .float-button:active {
+      transform: scale(1.05);
    }
 
    .float-popup-confirm {
@@ -206,14 +214,14 @@
    
    .confirm-button {
       all: unset;
-      background-color: gray;
       font-family: "Roboto", sans-serif;
       padding: .4rem .8rem;
       border-radius: 5px;
       color: var(--gr1);
-      font-weight: 800px;
+      font-weight: 600;
       font-size: 1rem;
-      
+      cursor: pointer;
+      color: var(--w1);
    }
 
    .confirm-button.yes {
