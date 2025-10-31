@@ -3,7 +3,9 @@ export default function speechRecognition() {
    let isRecording = false;
 
    const recButton = document.querySelector('.rec-button');
-   const recStatus = document.querySelector('.rec-status');
+   const recStatus = document.querySelector('.rec-statusd')
+   const clearButton = document.querySelector('.clear-button');
+   const translateButton = document.querySelector('.translate-button');
    const recText = document.querySelector('#rec-text');
    
    function Setup() {
@@ -23,6 +25,7 @@ export default function speechRecognition() {
       recognition.interimResults = true;
 
       let finalTranscript = '';
+      let interim = '';
 
       recognition.onstart = () => {
          isRecording = true;
@@ -41,12 +44,23 @@ export default function speechRecognition() {
       }
 
       recognition.onresult = (event) => {
-         console.log(event);
-      }
+         let interim = '';
+         let finalTranscript = '';
+         for (let i = event.resultIndex; i < event.results.length; i++) {
+            const transcript = event.results[i][0].transcript;
+            if (event.results[i].isFinal) finalTranscript += transcript + ' ';
+            else interim += transcript;
+         }
+         asrOut.value = (finalTranscript + interim).trim();
+      };
    }
    
-   Setup();
 
+   function clearForm() {
+      recText.value = '';
+   }
+
+   Setup();
 
    recButton.addEventListener("click", () => {
       if (!isRecording) {
@@ -55,6 +69,8 @@ export default function speechRecognition() {
       else {
          recognition.stop();
       }
-   })
+   });
+
+   clearButton.addEventListener("click", clearForm);
 
 }

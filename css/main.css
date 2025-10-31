@@ -149,6 +149,8 @@
    }
 }
 
+
+
 @media screen and (min-width: 1200px) {
    .main {
       flex-direction: row;
@@ -156,6 +158,10 @@
       align-items: center;
       gap: 100px;
       padding-top: 60px;
+   }
+
+   .output-libras {
+      height: 480px;
    }
 
    .float-button {
@@ -201,7 +207,7 @@
    }
    
    .float-confirmBox h1 {
-      font-size: 1.5rem;
+      font-size: 1.25rem;
       font-family: "Nunito Sans", sans-serif;
       font-weight: 400;
    }

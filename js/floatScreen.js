@@ -2,47 +2,64 @@ export default function floatScreen() {
    const isDesktop = window.matchMedia("(min-width: 1200px)").matches;
 
    if (isDesktop) {
-      function floatScreen(event) {
-         console.log(event);
-         let [X, Y] = [event.clientX, event.clientY];
-         
-         
-         if (X >= (window.innerWidth - outputLibras.offsetWidth)) {
-            outputLibras.style.left = `${window.innerWidth - outputLibras.offsetWidth}px`;
+      function Float() {
+         function floatScreen(event) {
+            let [X, Y] = [event.clientX, event.clientY];
+            
+            
+            if (X >= (window.innerWidth - outputLibras.offsetWidth)) {
+               outputLibras.style.left = `${(window.innerWidth - 20) - outputLibras.offsetWidth}px`;
+            }
+            else {
+               outputLibras.style.left = `${X - 20}px`;
+               outputLibras.style.top = `${Y - 20}px`;
+            }            
+
+            console.log(Y);
+            // console.log(window.innerHeight);
+            // console.log(outputLibras.offsetHeight);
+         }
+   
+         function mouseDown() {
+            document.body.addEventListener('mousemove', floatScreen);
+            document.body.addEventListener('mouseup', mouseUp);
+            outputLibras.classList.add('float-mode');
+         }
+   
+         function mouseUp() {
+            document.body.removeEventListener('mousemove', floatScreen);
+            document.body.removeEventListener('mouseup', mouseUp);
+         }
+   
+         const outputLibras = document.querySelector('.output-libras-section');
+         outputLibras.addEventListener('mousedown', mouseDown);
+      }
+
+      function confirmDecision(confirmBoxDecision) {
+         if (confirmBoxDecision) {
+            Float();
          }
          else {
-            outputLibras.style.left = `${X - 20}px`;
-            outputLibras.style.top = `${Y - 20}px`;
+            console.log('...');
          }
+
+         const floatPopUp = document.querySelector('.float-popup-confirm');
+         floatPopUp.classList.add('hide');
+         setTimeout(() => {
+            floatPopUp.remove();
+          }, 500);
+      }
       
-      }
-   
-      function mouseDown() {
-         document.body.addEventListener('mousemove', floatScreen);
-         document.body.addEventListener('mouseup', mouseUp);
-         outputLibras.classList.add('float-mode');
-      }
-   
-      function mouseUp() {
-         document.body.removeEventListener('mousemove', floatScreen);
-         document.body.addEventListener('mouseup', mouseUp);
-         // outputLibras.classList.remove('float-mode');
-      }
-   
-      const outputLibras = document.querySelector('.output-libras-section');
-      // outputLibras.addEventListener('mousedown', mouseDown);
-   
-   
       function floatConfirm () {
          const noConfirm = document.querySelector('.confirm-button.no');
          const yesConfirm = document.querySelector('.confirm-button.yes');
-
+         
          noConfirm.addEventListener('click', () => {
-            const floatPopUp = document.querySelector('.float-popup-confirm');
-            floatPopUp.classList.add('hide');
-            setTimeout(() => {
-               floatPopUp.remove();
-            }, 500);
+            confirmDecision(0);
+         });
+
+         yesConfirm.addEventListener('click', () => {
+            confirmDecision(1);
          })
       }
 
