@@ -1,0 +1,271 @@
+.main {
+   display: flex;
+   flex-wrap: wrap;
+   flex-direction: column;
+   align-content: center;
+   gap: 50px;
+   padding: 3rem 1.25rem;
+   transition: .5s all ease-in-out;
+}
+
+.main:not(.rec-text) {
+   user-select: none;
+}
+
+.recording-section, .output-libras-section {
+   background-color: var(--g2);
+   box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.5);
+   border: 3px solid var(--g1);
+   padding: 1.5rem 1.25rem;
+   border-radius: 10px;
+   box-sizing: border-box;
+   opacity: 0;
+}
+
+.output-libras-section.float-mode {
+   position: absolute;
+   z-index: 1;
+}
+
+.main h1 {
+   font-family: "Nunito Sans", sans-serif;
+   font-weight: 600;
+   font-size: 1.25rem;
+   text-align: center;
+   color: var(--b1);
+}
+
+.button {
+   cursor: pointer;
+   margin-top: 20px;
+   padding: 0.75rem 1.25rem;
+   border-radius: 5px;
+   background-color: var(--g1);
+   color: var(--w1);
+   font-size: 1rem;
+   font-weight: 500;
+   font-family: "Roboto", sans-serif;
+}
+
+.button:active {
+   transform: scale(1.05);
+}
+
+.rec-status{
+   display: block;
+   margin-top: 10px;
+   font-family: "Nunito Sans", sans-serif;
+   display: flex;
+   align-items: center;
+   font-size: 1rem;
+   font-weight: 600;
+}
+
+.rec-status::before {
+   content: "";
+   display: inline-block;
+   width: 12px;
+   height: 12px;
+   border-radius: 50%;
+   margin-right: 5px;
+}
+
+.rec-status.waiting::before {
+   background-color: var(--rc-waiting);
+}
+   
+.rec-status.error::before {
+   background-color: var(--rc-err);
+}
+
+.rec-status.recording::before {
+   background-color: var(--rc-on);
+}
+
+.rec-text {
+   width: 100%;
+   border-radius: 10px;
+   margin-top: 10px;
+   background-color: var(--g3);
+   height: 200px;
+   padding: 1rem;
+   box-sizing: border-box;
+   font-size: 1rem;
+   font-family: "Nunito Sans", sans-serif;
+   outline: none;
+   border: 2px solid var(--g1);
+}
+
+.option-button {
+   display: flex;
+   gap: 20px;
+}
+
+.rec-tip {
+   margin-top: 20px;
+   font-family: "Nunito Sans", sans-serif;
+}
+
+.rec-tip span {
+   color: var(--g1);
+}
+
+.output-libras {
+   margin-top: 20px;
+   width: 100%;
+   height: 500px;
+   background-color: var(--w1);
+   border-radius: 5px;
+}
+
+.output-libras-section {
+   position: relative;
+}
+
+.float-button {
+   display: none;
+}
+
+.float-button:active {
+   transform: scale(1.05);
+}
+
+
+@media screen and (min-width: 400px) {
+   .main {
+      padding: 4rem 2rem;
+   }
+   
+   .rec-status, .rec-text, .rec-tip {
+      font-size: 0.875rem;
+   }
+   
+   .rec-tip {
+      text-align: center;
+   }
+   
+   .recording-section, .output-libras-section {
+      padding: 1.25rem;
+   }
+}
+
+
+
+@media screen and (min-width: 1200px) {
+   .main {
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: 100px;
+      padding-top: 60px;
+   }
+
+   .output-libras {
+      height: 480px;
+   }
+
+   .float-button {
+      all: unset;
+      background-image: url("../img/float.svg");
+      width: 32px;
+      height: 32px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      position: absolute;
+      right: 0px;
+      top: 0px;
+      cursor: pointer;
+      background-color: var(--g1);
+      border-radius: 0px 5px 0px 5px;
+   }
+
+   .float-button:active {
+      transform: scale(1.05);
+   }
+
+   .float-popup-confirm {
+      position: absolute;
+      display: flex;
+      align-items: start;
+      justify-content: center;
+      background-color: rgba(0, 0, 0, 0.5);
+      width: 100%;
+      height: 100%;
+      top: 0;
+      bottom: 0;
+      z-index: 1;
+      user-select: none;
+   }
+
+   .float-confirmBox {
+      color: var(--w1);
+      padding: 1.5rem 2rem;
+      margin-top: 300px;
+      background-color: var(--b1);
+      border-radius: 5px;
+   }
+   
+   .float-confirmBox h1 {
+      font-size: 1.25rem;
+      font-family: "Nunito Sans", sans-serif;
+      font-weight: 400;
+   }
+
+   .float-confirm-buttons{
+      display: flex;
+      gap: 15px;
+      margin-top: 10px;
+   }
+   
+   .confirm-button {
+      all: unset;
+      font-family: "Roboto", sans-serif;
+      padding: .4rem .8rem;
+      border-radius: 5px;
+      color: var(--gr1);
+      font-weight: 600;
+      font-size: 1rem;
+      cursor: pointer;
+      color: var(--w1);
+   }
+
+   .confirm-button.yes {
+      background-color: var(--g1);
+   }
+
+   .confirm-button.no {
+      background-color: var(--rc-err);
+   }
+
+   .confirm-button:active {
+      transform: scale(1.05);
+   }
+
+   .recording-section, .output-libras-section  {
+      padding: 1.875rem 2.5rem;
+   }
+   
+   .rec-status, .rec-text, .rec-tip {
+      font-size: 1rem;
+   }
+
+   .rec-text {
+      padding: 1rem;
+   }
+
+   .recording-section h1, .output-libras-section h1 {
+      font-size: 1.5rem;
+      text-align: start;
+   }
+
+   .button {
+      font-size: 1.25rem;
+   }
+
+   .output-libras {
+      background-color: var(--w1);
+      border-radius: 10px;
+      width: 500px;
+   }
+}

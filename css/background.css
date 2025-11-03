@@ -1,0 +1,17 @@
+body {
+   background-image: url('../img/background2.jpg');
+   background-attachment: fixed;
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-color: #F5F5F5;
+   background-position: center;
+}
+
+.background-blur {
+   position: fixed;
+   z-index: -1;
+   width: 100%;
+   top: 0;
+   bottom: 0;
+   background-color: #060e183a;  
+}

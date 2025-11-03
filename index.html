@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Voz Em Libras</title>
+   <link rel="stylesheet" href="./css/index.css">
+
+</head>
+<body id="recording">
+
+   <div class="background-blur"></div>
+   <header class="header">
+      <img src="img/logo.svg" alt="" class="header-logo">
+
+      <button class="mobile-menu"></button>
+
+      <ul class="header-menu">
+         <li><a href="./sobre.html">Sobre</a></li>
+         <li><a href="">Gravação</a></li>
+      </ul>
+   </header>
+   
+   <main class="main"> 
+      <section class="recording-section">
+         <h1>1ª Etapa - Gravação de Áudio</h1>
+         <button class="rec-button button">Nova Gravação</button>
+         <span class="rec-status waiting">Aguardando</span>
+         <textarea name="rec-text" id="rec-text" class="rec-text" placeholder="Ex.: Eu vou para a casa com o gato"></textarea>
+         
+         <div class="option-button">
+            <button class="translate-button button">Traduzir</button>
+            <button class="clear-button button">Limpar</button>
+         </div> 
+         
+         <footer class="rec-tip">
+            <p>Dica: fale, edite o texto se precisar e clique em <span>Traduzir</span>.</p>
+         </footer>
+         
+      </section>
+      
+      <section class="output-libras-section">
+         <button class="float-button"></button>
+
+         <h1>2ª Etapa - Tradução em Libras</h1>
+         <div class="output-libras"></div>
+      </section>
+   </main>
+   
+   <footer class="footer">
+      <p>⚠ Observação: este site traduz a voz ou escrita do usuário para linguágem de libras para fins educacionais — não substitui intérprete profissional!</p>
+   </footer>
+
+   <script src="./js/index.js" type="module"></script>
+</body>
+</html>
