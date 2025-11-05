@@ -2,10 +2,10 @@
 .header {
    position: relative;
    z-index: 1;
-   /* background-color: var(--b1); */
    display: flex;
    justify-content: space-between;
    align-items: center;
+   padding: 0 10px;
 }
 
 .header-logo {
@@ -14,11 +14,12 @@
 }
 
 .header-menu {
-   display: none;
-   gap: 1.5rem;
+   display: flex;
+   gap: 1rem;
    font-family: "Roboto", sans-serif;
    color: var(--w1);
    transition: .2s;
+   font-size: 1.125rem;
 }
 
 .header-menu li a {
@@ -35,8 +36,8 @@
 /* Desktop */
 @media screen and (min-width: 1200px) {
 
-   .mobile-menu {
-      display: none;
+   .header {
+      padding: 0rem 1.25rem;
    }
 
    .header-logo {
@@ -46,7 +47,6 @@
 
    .header-menu {
       font-size: 1.5rem;
-      display: flex;
-      padding: 1.5rem;
+      gap: 1.5rem;
    }
 }
