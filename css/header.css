@@ -8,6 +8,11 @@
    align-items: center;
 }
 
+.header-logo {
+   height: 80px;
+   width: auto; 
+}
+
 .header-menu {
    display: none;
    gap: 1.5rem;
@@ -32,6 +37,11 @@
 
    .mobile-menu {
       display: none;
+   }
+
+   .header-logo {
+      height: 100px;
+      width: auto;
    }
 
    .header-menu {
