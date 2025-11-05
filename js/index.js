@@ -1,4 +1,4 @@
-import speechRecognition from "./SpeechRecognition.js";
+import speechRecognition from "./webSpeech.js";
 import bodyAnimation from "./bodyAnimations.js";
 import swapScreen from "./swap.js";
 
