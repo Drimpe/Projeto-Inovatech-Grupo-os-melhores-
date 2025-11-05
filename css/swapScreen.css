@@ -7,6 +7,9 @@
     all: unset;
     font-size: 2rem;
     cursor: pointer;
+    position: absolute;
+    top: 0px;
+    left: 20px;
 }
 
 .swap-button:active {
