@@ -4,7 +4,7 @@
    flex-direction: column;
    align-content: center;
    gap: 50px;
-   padding: 3rem 1.25rem;
+   padding: 2rem 1.25rem;
    transition: .5s all ease-in-out;
 }
 
@@ -115,7 +115,7 @@
 
 @media screen and (min-width: 400px) {
    .main {
-      padding: 4rem 2rem;
+      padding: 2rem;
    }
    
    .rec-status, .rec-text, .rec-tip {
@@ -131,13 +131,28 @@
    }
 }
 
+@media screen and (min-width: 768px) {
+   .main {
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: 25px;
+      flex-grow: 1;
+   }  
+
+   .output-libras-section {
+      flex: 1;
+      max-width: 580px;
+   }
+}
+
 @media screen and (min-width: 1200px) {
    .main {
       flex-direction: row;
       justify-content: center;
       align-items: center;
-      gap: 100px;
-      padding-top: 60px;
+      gap: 50px;
+      padding: 0;
    }
 
    .main h1 {
@@ -175,6 +190,6 @@
    .output-libras {
       background-color: var(--w1);
       border-radius: 10px;
-      width: 500px;
+      width: 100%;
    }
 }
