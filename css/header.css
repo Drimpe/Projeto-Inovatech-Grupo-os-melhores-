@@ -27,6 +27,8 @@
    border-bottom: 2px solid transparent;
    padding-bottom: 2px;
    font-weight: 400;
+   -webkit-user-drag: none;
+   user-select: none;
 }
 
 .header-menu li a:hover {
