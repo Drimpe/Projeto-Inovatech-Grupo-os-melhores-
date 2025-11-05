@@ -3,7 +3,7 @@ export default function speechRecognition() {
    let isRecording = false;
 
    const recButton = document.querySelector('.rec-button');
-   const recStatus = document.querySelector('.rec-statusd')
+   const recStatus = document.querySelector('.rec-status')
    const clearButton = document.querySelector('.clear-button');
    const translateButton = document.querySelector('.translate-button');
    const recText = document.querySelector('#rec-text');
