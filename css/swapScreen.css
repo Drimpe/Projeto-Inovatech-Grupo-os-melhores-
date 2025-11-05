@@ -1,0 +1,18 @@
+
+.output-libras-section {
+    position: relative;
+}
+
+.swap-button {
+    all: unset;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.swap-button:active {
+    transform: scale(1.05);
+}
+
+.output-libras-section.swap {
+   order: -1;
+}

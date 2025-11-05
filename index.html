@@ -5,6 +5,7 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Voz Em Libras</title>
    <link rel="stylesheet" href="./css/index.css">
+   <script src="./js/index.js" type="module"></script>
 
 </head>
 <body id="recording">
@@ -23,7 +24,7 @@
    
    <main class="main"> 
       <section class="recording-section">
-         <h1>1ª Etapa - Gravação de Áudio</h1>
+         <h1>Gravação de Áudio</h1>
          <button class="rec-button button">Nova Gravação</button>
          <span class="rec-status waiting">Aguardando</span>
          <textarea name="rec-text" id="rec-text" class="rec-text" placeholder="Ex.: Eu vou para a casa com o gato"></textarea>
@@ -40,9 +41,9 @@
       </section>
       
       <section class="output-libras-section">
-         <button class="float-button"></button>
+         <button class="swap-button">←</button>
 
-         <h1>2ª Etapa - Tradução em Libras</h1>
+         <h1>Tradução em Libras</h1>
          <div class="output-libras"></div>
       </section>
    </main>
@@ -51,6 +52,5 @@
       <p>⚠ Observação: este site traduz a voz ou escrita do usuário para linguágem de libras para fins educacionais — não substitui intérprete profissional!</p>
    </footer>
 
-   <script src="./js/index.js" type="module"></script>
 </body>
 </html>
