@@ -1,21 +1,11 @@
-/* .header-title, .header-menu {
-   position: relative;
-   z-index: 1;
-} */
 
 .header {
    position: relative;
    z-index: 1;
-   background-color: var(--g1);
+   background-color: var(--b1);
    display: flex;
    justify-content: space-between;
    align-items: center;
-}
-
-.header-logo {
-   height: 80px;
-   /* margin: auto; */
-   width: auto; 
 }
 
 .header-menu {
@@ -42,11 +32,6 @@
 
    .mobile-menu {
       display: none;
-   }
-
-   .header-logo {
-      height: 100px;
-      width: auto;
    }
 
    .header-menu {
