@@ -13,12 +13,10 @@
 
 @media screen and (min-width: 768px) {
    .footer {
-      position: fixed;
-      bottom: 0;
-      left: 0;
       right: 0;
+      margin-top: 100px;
    }
-
+   
    .footer p{
       font-size: 1rem;
    }
@@ -28,7 +26,13 @@
    body {
       position: relative;
    }
-
+   .footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      margin: initial;
+   }
+   
    .footer p {
       font-size: 1.125rem;
    }

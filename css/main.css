@@ -137,12 +137,10 @@
       justify-content: center;
       align-items: center;
       gap: 25px;
-      flex-grow: 1;
    }  
 
-   .output-libras-section {
+   .recording-section, .output-libras-section {
       flex: 1;
-      max-width: 580px;
    }
 }
 
@@ -159,12 +157,17 @@
       font-size: 1.5rem;
    }
 
+   .output-libras-section {
+      width: 580px;
+   }
+
    .output-libras {
       height: 480px;
    }
 
    .recording-section, .output-libras-section  {
       padding: 1.875rem 2.5rem;
+      flex: initial;
    }
    
    .rec-status, .rec-text, .rec-tip {
