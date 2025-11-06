@@ -13,7 +13,6 @@
 
 @media screen and (min-width: 768px) {
    .footer {
-      right: 0;
       margin-top: 100px;
    }
    
@@ -26,9 +25,11 @@
    body {
       position: relative;
    }
+
    .footer {
       position: fixed;
       bottom: 0;
+      right: 0;
       left: 0;
       margin: initial;
    }
