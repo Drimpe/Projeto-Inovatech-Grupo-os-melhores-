@@ -51,11 +51,15 @@ export default function speechRecognition() {
             if (event.results[i].isFinal) finalTranscript += transcript + ' ';
             else interim += transcript;
          }
-         asrOut.value = (finalTranscript + interim).trim();
+         recText.value = (finalTranscript + interim).trim();
       };
+
+      recognition.onerror = (event) => {
+         recStatus.textContent = `Erro. Recarregando a página...`;
+
+      }
    }
    
-
    function clearForm() {
       recText.value = '';
    }
