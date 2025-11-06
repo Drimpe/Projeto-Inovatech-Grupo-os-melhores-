@@ -66,7 +66,7 @@ export default function speechRecognition() {
 
          setTimeout(() => {
             location.reload();
-         }, 1500);
+         }, 1000);
       }
    }
    
