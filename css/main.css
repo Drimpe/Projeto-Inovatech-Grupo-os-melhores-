@@ -123,6 +123,10 @@ body:not(.rec-text) {
    border-radius: 5px;
 }
 
+.output-libras img[src=""] {
+   display: none;
+}
+
 
 @media screen and (min-width: 400px) {
    .main {
