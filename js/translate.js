@@ -40,22 +40,28 @@ const alphabet = {
 }
 
 export default function Translate() {
+    const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
-    function translateToLibras() {
+
+    async function translateToLibras(arr) {
+        const outputLibras = document.querySelector('.output-libras img');
+
+        for (const item of arr) {
+            if (alphabet[item]) {
+                console.log(alphabet[item]);
+            }
+        }
+    }
+
+    function formatText() {
         let textValue = document.querySelector('.rec-text').value.toLowerCase();
         textValue = textValue.replace(/\s/g, '');
-
         const letterArray = textValue.split('');
-        letterArray.forEach((value) => {
-            
-            if (alphabet[value]) {
-                console.log(value)
-            }
-        });
+        translateToLibras(letterArray);
     }
 
     const translateButton = document.querySelector('.translate-button');
 
-    translateButton.addEventListener('click', translateToLibras);
+    translateButton.addEventListener('click', formatText);
 
 }
