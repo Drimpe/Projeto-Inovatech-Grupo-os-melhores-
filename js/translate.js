@@ -47,9 +47,12 @@ export default function Translate() {
         const outputLibras = document.querySelector('.output-libras img');
 
         for (const item of arr) {
-            if (alphabet[item]) {
-                console.log(alphabet[item]);
+            const imageUrl = alphabet[item];
+            if (imageUrl) {
+                outputLibras.src = imageUrl;
             }
+
+            await delay(1000);
         }
     }
 
