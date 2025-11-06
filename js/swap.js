@@ -1,4 +1,3 @@
-
 export default function swapScreen() {
     const isDesktopOrTablet = window.matchMedia('(min-width: 768px)').matches;
 
