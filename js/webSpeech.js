@@ -3,7 +3,7 @@ export default function speechRecognition() {
    let isRecording = false;
 
    const recButton = document.querySelector('.rec-button');
-   const recStatus = document.querySelector('.rec-status')
+   const recStatus = document.querySelector('.rec-status');
    const clearButton = document.querySelector('.clear-button');
    const translateButton = document.querySelector('.translate-button');
    const recText = document.querySelector('#rec-text');
@@ -33,6 +33,9 @@ export default function speechRecognition() {
          recStatus.classList.remove('waiting');
          recStatus.classList.add('recording');
          recStatus.textContent = `Gravando`;
+
+         translateButton.disabled = true;
+         clearButton.disabled = true;
       }
 
       recognition.onend = () => {
@@ -41,6 +44,9 @@ export default function speechRecognition() {
          recStatus.classList.remove('recording');
          recStatus.classList.add('waiting');
          recStatus.textContent = 'Aguardando';
+
+         translateButton.disabled = false;
+         clearButton.disabled = false;
       }
 
       recognition.onresult = (event) => {
@@ -54,18 +60,22 @@ export default function speechRecognition() {
          recText.value = (finalTranscript + interim).trim();
       };
 
-      recognition.onerror = (event) => {
+      recognition.onerror = () => {
+         recStatus.classList.add('error');
          recStatus.textContent = `Erro. Recarregando a página...`;
 
+         setTimeout(() => {
+            location.reload();
+         }, 1500);
       }
    }
    
    function clearForm() {
       recText.value = '';
    }
-
+   
    Setup();
-
+   
    recButton.addEventListener('click', () => {
       if (!isRecording) {
          recognition.start();
@@ -74,7 +84,7 @@ export default function speechRecognition() {
          recognition.stop();
       }
    });
-
+   
    clearButton.addEventListener('click', clearForm);
-
+   
 }
