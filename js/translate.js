@@ -50,6 +50,7 @@ export default function Translate() {
             const imageUrl = alphabet[item];
             if (imageUrl) {
                 outputLibras.src = imageUrl;
+                
             }
 
             await delay(1000);
