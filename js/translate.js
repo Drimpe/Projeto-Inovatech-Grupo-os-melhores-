@@ -86,7 +86,7 @@ export default function Translate() {
         return isWord;
     }
 
-    async function convertToLibras(letterArray) {
+    async function letterConvert(letterArray) {
         const outputLibras = document.querySelector('.output-libras img');
         let gifDuration = 0;
 
@@ -98,7 +98,7 @@ export default function Translate() {
                 gifDuration = alphabet[letter][1];
             }
             
-            await delay(1500);
+            await delay(gifDuration);
         }
 
         outputLibras.src = '';
@@ -116,15 +116,11 @@ export default function Translate() {
             }
             else {
                 const letterArray = textValue.split('');
-                convertToLibras(letterArray);
+                letterConvert(letterArray);
             }
-
         }
-        
     }
 
     const translateButton = document.querySelector('.translate-button');
-
     translateButton.addEventListener('click', formatText);
-
 }
