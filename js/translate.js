@@ -38,12 +38,28 @@ const alphabet = {
     'z': '/js/libras/alfabeto/z.gif',
 }
 
-const words = {}
+const words = {
+    'banana': '/js/libras/palavras/banana.gif',
+    'boanoite': '/js/libras/palavras/boanoite.gif',
+    'boatarde': '/js/libras/palavras/boatarde.gif',
+    'bolo': '/js/libras/palavras/bolo.gif',
+    'bom': '/js/libras/palavras/bom.gif',
+    'bomdia': '/js/libras/palavras/bomdia.gif',
+    'bonito': '/js/libras/palavras/bonito.gif',
+    'cadeira': '/js/libras/palavras/cadeira.gif',
+    'calma': '/js/libras/palavras/calma.gif',
+    'calor': '/js/libras/palavras/calor.gif',
+    'cartaodecredito': '/js/libras/palavras/cartaodecredito.gif',
+    'casa': '/js/libras/palavras/casa.gif',
+    'castelo': '/js/libras/palavras/castelo.gif',
+    'caverna': '/js/libras/palavras/caverna.gif',
+    'sentar': '/js/libras/palavras/sentar.gif',
+}
 
 export default function Translate() {
     const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
-    async function translateToLibras(arr) {
+    async function convertToLibras(arr) {
         const outputLibras = document.querySelector('.output-libras img');
 
         for (const item of arr) {
@@ -53,15 +69,17 @@ export default function Translate() {
 
             }
 
-            await delay(1250);
+            await delay(1500);
         }
+
+        outputLibras.src = '';
     }
 
     function formatText() {
         let textValue = document.querySelector('.rec-text').value.toLowerCase();
         textValue = textValue.replace(/\s/g, '');
         const letterArray = textValue.split('');
-        translateToLibras(letterArray);
+        convertToLibras(letterArray);
     }
 
     const translateButton = document.querySelector('.translate-button');
