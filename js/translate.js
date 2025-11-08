@@ -39,12 +39,12 @@ const alphabet = {
 }
 
 const words = {
-    'banana': '/js/libras/palavras/banana.gif',
-    'boanoite': '/js/libras/palavras/boanoite.gif',
-    'boatarde': '/js/libras/palavras/boatarde.gif',
-    'bolo': '/js/libras/palavras/bolo.gif',
+    'banana': ['/js/libras/palavras/banana.gif', 1580],
+    'boanoite': ['/js/libras/palavras/boanoite.gif', 3500],
+    'boatarde': ['/js/libras/palavras/boatarde.gif', 2300],
+    'bolo': ['/js/libras/palavras/bolo.gif', 3100],
     'bom': '/js/libras/palavras/bom.gif',
-    'bomdia': '/js/libras/palavras/bomdia.gif',
+    'bomdia': ['/js/libras/palavras/bomdia.gif', 2600],
     'bonito': '/js/libras/palavras/bonito.gif',
     'cadeira': '/js/libras/palavras/cadeira.gif',
     'calma': '/js/libras/palavras/calma.gif',
@@ -59,16 +59,43 @@ const words = {
 export default function Translate() {
     const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
+    function wordConvert(textValue) {
+        const outputLibras = document.querySelector('.output-libras img');
+        let isWord = false;
+        let gifDuration = 0;
+        
+        for (const word in words) {
+
+            if (word === textValue) {
+                const imageUrl = words[word][0];
+                outputLibras.src = imageUrl;
+
+                gifDuration = words[word][1];
+                isWord = true;
+
+                break;
+            }
+        }
+
+        if (isWord) {
+            setTimeout(() => {
+                outputLibras.src = '';
+            }, gifDuration + 10);
+        }
+
+        return isWord;
+    }
+
     async function convertToLibras(arr) {
         const outputLibras = document.querySelector('.output-libras img');
 
-        for (const item of arr) {
-            const imageUrl = alphabet[item];
+        for (const letter of arr) {
+            const imageUrl = alphabet[letter];
+
             if (imageUrl) {
                 outputLibras.src = imageUrl;
-
             }
-
+            
             await delay(1500);
         }
 
@@ -78,8 +105,20 @@ export default function Translate() {
     function formatText() {
         let textValue = document.querySelector('.rec-text').value.toLowerCase();
         textValue = textValue.replace(/\s/g, '');
-        const letterArray = textValue.split('');
-        convertToLibras(letterArray);
+    
+        if (textValue) {
+            const convertedToWord = wordConvert(textValue);
+            
+            if(convertedToWord) {
+                return;
+            }
+            else {
+                const letterArray = textValue.split('');
+                convertToLibras(letterArray);
+            }
+
+        }
+        
     }
 
     const translateButton = document.querySelector('.translate-button');
