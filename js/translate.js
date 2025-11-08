@@ -36,12 +36,14 @@ const alphabet = {
     'x': '/js/libras/x.gif',
     'y': '/js/libras/y.gif',
     'z': '/js/libras/z.gif',
+}
 
+const words = {
+    
 }
 
 export default function Translate() {
     const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
-
 
     async function translateToLibras(arr) {
         const outputLibras = document.querySelector('.output-libras img');
