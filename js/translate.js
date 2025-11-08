@@ -39,6 +39,16 @@ const alphabet = {
 }
 
 const words = {
+    'zero': ['/js/libras/alfabeto/0.gif', 1530],
+    'um': ['/js/libras/alfabeto/1.gif', 1590],
+    'dois': ['/js/libras/alfabeto/2.gif', 1590],
+    'tres': ['/js/libras/alfabeto/3.gif', 2010],
+    'quatro': ['/js/libras/alfabeto/4.gif', 1590],
+    'cinco': ['/js/libras/alfabeto/5.gif', 1590],
+    'seis': ['/js/libras/alfabeto/6.gif', 1830],
+    'sete': ['/js/libras/alfabeto/7.gif', 2070],
+    'oito': ['/js/libras/alfabeto/8.gif', 1470],
+    'nove': ['/js/libras/alfabeto/9.gif', 1650],
     'banana': ['/js/libras/palavras/banana.gif', 1580],
     'boanoite': ['/js/libras/palavras/boanoite.gif', 3500],
     'boatarde': ['/js/libras/palavras/boatarde.gif', 2300],
