@@ -23,35 +23,35 @@ export default function speechRecognition() {
       recognition.lang = 'pt-BR';
       recognition.continuous = true;
       recognition.interimResults = true;
-
-      let finalTranscript = '';
-      let interim = '';
-
+      
       recognition.onstart = () => {
          isRecording = true;
          recButton.textContent = 'Parar Gravação';
          recStatus.classList.remove('waiting');
          recStatus.classList.add('recording');
          recStatus.textContent = `Gravando`;
-
+         
          translateButton.disabled = true;
          clearButton.disabled = true;
       }
-
+      
       recognition.onend = () => {
          isRecording = false;
          recButton.textContent = 'Nova gravação';
          recStatus.classList.remove('recording');
          recStatus.classList.add('waiting');
          recStatus.textContent = 'Aguardando';
-
+         
          translateButton.disabled = false;
          clearButton.disabled = false;
       }
-
+      
+      let finalTranscript = '';
+      let interim = '';
+      
       recognition.onresult = (event) => {
-         let interim = '';
-         let finalTranscript = '';
+         interim = '';
+         finalTranscript = '';
          for (let i = event.resultIndex; i < event.results.length; i++) {
             const transcript = event.results[i][0].transcript;
             if (event.results[i].isFinal) finalTranscript += transcript + ' ';
@@ -59,11 +59,11 @@ export default function speechRecognition() {
          }
          recText.value = (finalTranscript + interim).trim();
       };
-
+      
       recognition.onerror = () => {
          recStatus.classList.add('error');
          recStatus.textContent = `Erro. Recarregando a página...`;
-
+         
          setTimeout(() => {
             location.reload();
          }, 1000);
