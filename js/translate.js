@@ -1,41 +1,41 @@
 const alphabet = {
-    '0': '/js/libras/alfabeto/0.gif',
-    '1': '/js/libras/alfabeto/1.gif',
-    '2': '/js/libras/alfabeto/2.gif',
-    '3': '/js/libras/alfabeto/3.gif',
-    '4': '/js/libras/alfabeto/4.gif',
-    '5': '/js/libras/alfabeto/5.gif',
-    '6': '/js/libras/alfabeto/6.gif',
-    '7': '/js/libras/alfabeto/7.gif',
-    '8': '/js/libras/alfabeto/8.gif',
-    '9': '/js/libras/alfabeto/9.gif',
-    'a': '/js/libras/alfabeto/a.gif',
-    'b': '/js/libras/alfabeto/b.gif',
-    'c': '/js/libras/alfabeto/c.gif',
-    'ç': '/js/libras/alfabeto/ç.gif',
-    'd': '/js/libras/alfabeto/d.gif',
-    'e': '/js/libras/alfabeto/e.gif',
-    'f': '/js/libras/alfabeto/f.gif',
-    'g': '/js/libras/alfabeto/g.gif',
-    'h': '/js/libras/alfabeto/h.gif',
-    'i': '/js/libras/alfabeto/i.gif',
-    'j': '/js/libras/alfabeto/j.gif',
-    'k': '/js/libras/alfabeto/k.gif',
-    'l': '/js/libras/alfabeto/l.gif',
-    'm': '/js/libras/alfabeto/m.gif',
-    'n': '/js/libras/alfabeto/n.gif',
-    'o': '/js/libras/alfabeto/o.gif',
-    'p': '/js/libras/alfabeto/p.gif',
-    'q': '/js/libras/alfabeto/q.gif',
-    'r': '/js/libras/alfabeto/r.gif',
-    's': '/js/libras/alfabeto/s.gif',
-    't': '/js/libras/alfabeto/t.gif',
-    'u': '/js/libras/alfabeto/u.gif',
-    'v': '/js/libras/alfabeto/v.gif',
-    'w': '/js/libras/alfabeto/w.gif',
-    'x': '/js/libras/alfabeto/x.gif',
-    'y': '/js/libras/alfabeto/y.gif',
-    'z': '/js/libras/alfabeto/z.gif',
+    '0': ['/js/libras/alfabeto/0.gif', 1530],
+    '1': ['/js/libras/alfabeto/1.gif', 1590],
+    '2': ['/js/libras/alfabeto/2.gif', 1590],
+    '3': ['/js/libras/alfabeto/3.gif', 2010],
+    '4': ['/js/libras/alfabeto/4.gif', 1590],
+    '5': ['/js/libras/alfabeto/5.gif', 1590],
+    '6': ['/js/libras/alfabeto/6.gif', 1830],
+    '7': ['/js/libras/alfabeto/7.gif', 2070],
+    '8': ['/js/libras/alfabeto/8.gif', 1470],
+    '9': ['/js/libras/alfabeto/9.gif', 1650],
+    'a': ['/js/libras/alfabeto/a.gif', 2160],
+    'b': ['/js/libras/alfabeto/b.gif', 1770],
+    'c': ['/js/libras/alfabeto/c.gif', 1890],
+    'ç': ['/js/libras/alfabeto/ç.gif', 2850],
+    'd': ['/js/libras/alfabeto/d.gif', 3000],
+    'e': ['/js/libras/alfabeto/e.gif', 1530],
+    'f': ['/js/libras/alfabeto/f.gif', 3060],
+    'g': ['/js/libras/alfabeto/g.gif', 2400],
+    'h': ['/js/libras/alfabeto/h.gif', 3000],
+    'i': ['/js/libras/alfabeto/i.gif', 1860],
+    'j': ['/js/libras/alfabeto/j.gif', 2310],
+    'k': ['/js/libras/alfabeto/k.gif', 3150],
+    'l': ['/js/libras/alfabeto/l.gif', 1920],
+    'm': ['/js/libras/alfabeto/m.gif', 2310],
+    'n': ['/js/libras/alfabeto/n.gif', 1950],
+    'o': ['/js/libras/alfabeto/o.gif', 2730],
+    'p': ['/js/libras/alfabeto/p.gif', 2970],
+    'q': ['/js/libras/alfabeto/q.gif', 2070],
+    'r': ['/js/libras/alfabeto/r.gif', 2730],
+    's': ['/js/libras/alfabeto/s.gif', 2910],
+    't': ['/js/libras/alfabeto/t.gif', 2850],
+    'u': ['/js/libras/alfabeto/u.gif', 2850],
+    'v': ['/js/libras/alfabeto/v.gif', 2130],
+    'w': ['/js/libras/alfabeto/w.gif', 2190],
+    'x': ['/js/libras/alfabeto/x.gif', 1950],
+    'y': ['/js/libras/alfabeto/y.gif', 2100],
+    'z': ['/js/libras/alfabeto/z.gif', 1740],
 }
 
 const words = {
@@ -43,17 +43,17 @@ const words = {
     'boanoite': ['/js/libras/palavras/boanoite.gif', 3500],
     'boatarde': ['/js/libras/palavras/boatarde.gif', 2300],
     'bolo': ['/js/libras/palavras/bolo.gif', 3100],
-    'bom': '/js/libras/palavras/bom.gif',
+    'bom': ['/js/libras/palavras/bom.gif', 1800],
     'bomdia': ['/js/libras/palavras/bomdia.gif', 2600],
-    'bonito': '/js/libras/palavras/bonito.gif',
-    'cadeira': '/js/libras/palavras/cadeira.gif',
-    'calma': '/js/libras/palavras/calma.gif',
-    'calor': '/js/libras/palavras/calor.gif',
-    'cartaodecredito': '/js/libras/palavras/cartaodecredito.gif',
-    'casa': '/js/libras/palavras/casa.gif',
-    'castelo': '/js/libras/palavras/castelo.gif',
-    'caverna': '/js/libras/palavras/caverna.gif',
-    'sentar': '/js/libras/palavras/sentar.gif',
+    'bonito': ['/js/libras/palavras/bonito.gif', 1800],
+    'cadeira': ['/js/libras/palavras/cadeira.gif', 1590],
+    'calma': ['/js/libras/palavras/calma.gif', 2800],
+    'calor': ['/js/libras/palavras/calor.gif', 2470],
+    'cartaodecredito': ['/js/libras/palavras/calor.gif', 1800],
+    'casa': ['/js/libras/palavras/casa.gif', 1800],
+    'castelo': ['/js/libras/palavras/castelo.gif', 2600],
+    'caverna': ['/js/libras/palavras/caverna.gif', 5800],
+    'sentar': ['/js/libras/palavras/sentar.gif', 1590],
 }
 
 export default function Translate() {
@@ -80,20 +80,22 @@ export default function Translate() {
         if (isWord) {
             setTimeout(() => {
                 outputLibras.src = '';
-            }, gifDuration + 10);
+            }, gifDuration + 50);
         }
 
         return isWord;
     }
 
-    async function convertToLibras(arr) {
+    async function convertToLibras(letterArray) {
         const outputLibras = document.querySelector('.output-libras img');
+        let gifDuration = 0;
 
-        for (const letter of arr) {
-            const imageUrl = alphabet[letter];
+        for (const letter of letterArray) {
+            const imageUrl = alphabet[letter][0];
 
             if (imageUrl) {
                 outputLibras.src = imageUrl;
+                gifDuration = alphabet[letter][1];
             }
             
             await delay(1500);
