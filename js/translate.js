@@ -74,17 +74,11 @@ export default function Translate() {
         let isWord = false;
         let gifDuration = 0;
         
-        for (const word in words) {
-
-            if (word === textValue) {
-                const imageUrl = words[word][0];
-                outputLibras.src = imageUrl;
-
-                gifDuration = words[word][1];
-                isWord = true;
-
-                break;
-            }
+        if (words[textValue]) {
+            const imageUrl = words[textValue][0];
+            outputLibras.src = imageUrl;
+            gifDuration = words[textValue][1];
+            isWord = true;
         }
 
         if (isWord) {
