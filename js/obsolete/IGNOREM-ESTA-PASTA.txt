@@ -1,0 +1,1 @@
+Aqui contém arquivos que não estão sendo mais utilizados no projeto. Ignorem esta pasta.
