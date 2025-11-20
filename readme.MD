@@ -16,6 +16,7 @@
 
     - Ou então, pressione as teclas ALT + L + O (Não esqueça de estar com o arquivo index.html aberto e selecionado no VSCODE)
 
+    - O projeto irá abrir no navegador definido como padrão no seu sistema (Recomendo utilizarem o Google Chrome).
 
 3. FUNCIONALIDADES:
 
