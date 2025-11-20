@@ -1,3 +1,5 @@
+
+// Objeto com o endereço de cada gif e sua respectiva duração (em milissegundos)
 const alphabet = {
     '0': ['/js/libras/alfabeto/0.gif', 1530],
     '1': ['/js/libras/alfabeto/1.gif', 1590],
@@ -92,6 +94,8 @@ export default function Translate() {
 
     async function letterConvert(letterArray) {
         const outputLibras = document.querySelector('.output-libras img');
+        // Seleciona a 
+
         let gifDuration = 0;
 
         for (const letter of letterArray) {
@@ -105,12 +109,17 @@ export default function Translate() {
             await delay(gifDuration);
         }
 
+        // Limpa o campo de saída após a exibição de todas as letras (em gifs).
         outputLibras.src = '';
     }
 
+    // Função de formatação de texto
     function formatText() {
         let textValue = document.querySelector('.rec-text').value.toLowerCase();
+        // Seleciona todo o texto do formulário e o converte para letras minúsculas.
+
         textValue = textValue.replace(/\s/g, '');
+        // Remove todos os espaços do texto
     
         if (textValue) {
             const convertedToWord = wordConvert(textValue);
