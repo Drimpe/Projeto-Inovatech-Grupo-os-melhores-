@@ -1,17 +1,23 @@
 1. IMPORTANTE:
 
-- O PROJETO NÃO FUNCIONA SE FOR RODAR DIRETO DA PASTA (ABRIR O ARQUIVO index.html), POIS O SEU CONTEÚDO NÃO É EXIBIDO AO CARREGAR A PÁGINA.
-- É NECESSÁRIO USAR UM SERVIDOR LOCAL.
+- O projeto não funciona se for rodar direto da pasta (abrir somente o index.html), pois o seu conteúdo não é exibido ao carregar a página.
+- É necessário usar um servidor local.
 
 
 2. COMO RODAR O PROJETO?
 
-- INSTALE A EXTENSÃO LIVE SERVER OU FIVE  SERVER NO SEU VISUAL STUDIO CODE (VSCODE)
+- Instale a extensão LIVE SERVER ou FIVE SERVER no seu Visual Studio Code (VSCODE)
 
-- COM O SEU VISUAL STUDIO CODE (VSCODE) ABERTO, ABRA A PASTA DO PROJETO A PARTIR DO VSCODE PRESSIONANDO AS TECLAS CTRL + K + O
+- Com o seu Visual Studio Code (VSCODE) aberto, abra a pasta do projeto a partir do VSCODE pressionando as teclas CTRL + K + O
  
-- NO MENU À ESQUERDA (PASTA ABERTA) CLIQUE NO ARQUIVO INDEX.HTML
+- No menu à esquerda (pasta aberta) clique no arquivo index.html
 
-- CLIQUE NO BOTÃO "GO LIVE" LOCALIZADO NO CANTO INFERIOR DIREITO DO VSCODE
+- Clique no botão "Go Live" localizado no canto inferior direito do VSCODE
 
-- OU ENTÃO, PRESSIONE AS TECLAS ALT + L + O (NÃO ESQUEÇA DE ESTAR COM O ARQUIVO INDEX.HTML ABERTO E SELECIONADO NO VSCODE)
+- Ou então, pressione as teclas ALT + L + O (Não esqueça de estar com o arquivo index.html aberto e selecionado no VSCODE)
+
+
+3. Funcionalidades
+
+--- Os arquivos responsáveis pela principal funcionalidade do código (conversão de voz/texto para gifs em libras) são os arquivos translate.js (tradução) e webSpeech.js (reconhecimento de voz)
+--- Ambos arquivos estão localizados na pasta js
