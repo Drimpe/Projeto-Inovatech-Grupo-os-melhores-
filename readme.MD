@@ -19,5 +19,5 @@
 
 3. FUNCIONALIDADES:
 
-    - Os arquivos responsáveis pela principal funcionalidade do código (conversão de voz/texto para gifs em libras) são os arquivos translate.js (tradução) e webSpeech.js (reconhecimento de voz).
+    - Os arquivos responsáveis pela principal funcionalidade do projeto (conversão de voz/texto para gifs em libras) são os arquivos translate.js (tradução) e webSpeech.js (reconhecimento de voz).
     - Ambos arquivos estão localizados na pasta js.
