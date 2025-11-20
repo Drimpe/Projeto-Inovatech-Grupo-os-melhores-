@@ -6,9 +6,9 @@
 
 2. COMO RODAR O PROJETO?
 
-- Instale a extensão LIVE SERVER ou FIVE SERVER no seu Visual Studio Code (VSCODE)
+    - Instale a extensão LIVE SERVER ou FIVE SERVER no seu Visual Studio Code (VSCODE)
 
-- Com o seu Visual Studio Code (VSCODE) aberto, abra a pasta do projeto a partir do VSCODE pressionando as teclas CTRL + K + O
+    - Com o seu Visual Studio Code (VSCODE) aberto, abra a pasta do projeto a partir do VSCODE pressionando as teclas CTRL + K + O
  
 - No menu à esquerda (pasta aberta) clique no arquivo index.html
 
@@ -19,5 +19,5 @@
 
 3. Funcionalidades
 
---- Os arquivos responsáveis pela principal funcionalidade do código (conversão de voz/texto para gifs em libras) são os arquivos translate.js (tradução) e webSpeech.js (reconhecimento de voz)
---- Ambos arquivos estão localizados na pasta js
+- Os arquivos responsáveis pela principal funcionalidade do código (conversão de voz/texto para gifs em libras) são os arquivos translate.js (tradução) e webSpeech.js (reconhecimento de voz)
+- Ambos arquivos estão localizados na pasta js
