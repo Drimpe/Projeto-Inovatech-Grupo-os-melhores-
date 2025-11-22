@@ -40,64 +40,19 @@ const alphabet = {
     'z': ['/js/libras/alfabeto/z.gif', 1740],
 }
 
-const words = {
-    'zero': ['/js/libras/alfabeto/0.gif', 1530],
-    'um': ['/js/libras/alfabeto/1.gif', 1590],
-    'dois': ['/js/libras/alfabeto/2.gif', 1590],
-    'tres': ['/js/libras/alfabeto/3.gif', 2010],
-    'quatro': ['/js/libras/alfabeto/4.gif', 1590],
-    'cinco': ['/js/libras/alfabeto/5.gif', 1590],
-    'seis': ['/js/libras/alfabeto/6.gif', 1830],
-    'sete': ['/js/libras/alfabeto/7.gif', 2070],
-    'oito': ['/js/libras/alfabeto/8.gif', 1470],
-    'nove': ['/js/libras/alfabeto/9.gif', 1650],
-    'banana': ['/js/libras/palavras/banana.gif', 1580],
-    'boanoite': ['/js/libras/palavras/boanoite.gif', 3500],
-    'boatarde': ['/js/libras/palavras/boatarde.gif', 2300],
-    'bolo': ['/js/libras/palavras/bolo.gif', 3100],
-    'bom': ['/js/libras/palavras/bom.gif', 1800],
-    'bomdia': ['/js/libras/palavras/bomdia.gif', 2600],
-    'bonito': ['/js/libras/palavras/bonito.gif', 1800],
-    'cadeira': ['/js/libras/palavras/cadeira.gif', 1590],
-    'calma': ['/js/libras/palavras/calma.gif', 2800],
-    'calor': ['/js/libras/palavras/calor.gif', 2470],
-    'cartaodecredito': ['/js/libras/palavras/calor.gif', 1800],
-    'casa': ['/js/libras/palavras/casa.gif', 1800],
-    'castelo': ['/js/libras/palavras/castelo.gif', 2600],
-    'caverna': ['/js/libras/palavras/caverna.gif', 5800],
-    'sentar': ['/js/libras/palavras/sentar.gif', 1590],
-}
 
 export default function Translate() {
     const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
-    function wordConvert(textValue) {
-        const outputLibras = document.querySelector('.output-libras img');
-        let isWord = false;
-        let gifDuration = 0;
-        
-        if (words[textValue]) {
-            const imageUrl = words[textValue][0];
-            outputLibras.src = imageUrl;
-            gifDuration = words[textValue][1];
-            isWord = true;
-        }
-
-        if (isWord) {
-            setTimeout(() => {
-                outputLibras.src = '';
-            }, gifDuration + 50);
-        }
-
-        return isWord;
-    }
-
+    // Função de conversão de letras para gifs
     async function letterConvert(letterArray) {
         const outputLibras = document.querySelector('.output-libras img');
-        // Seleciona a 
+        // Seleciona o campo de saída e o armazena em uma constante
 
+        // Duração do gif é inicialmente definida em 0
         let gifDuration = 0;
 
+        // Laço de repetição (for) para percorrer cada letra do formulário
         for (const letter of letterArray) {
             const imageUrl = alphabet[letter][0];
 
@@ -109,8 +64,8 @@ export default function Translate() {
             await delay(gifDuration);
         }
 
-        // Limpa o campo de saída após a exibição de todas as letras (em gifs).
         outputLibras.src = '';
+        // Limpa o campo de saída após a exibição de todas as letras (em gifs).
     }
 
     // Função de formatação de texto
@@ -121,19 +76,20 @@ export default function Translate() {
         textValue = textValue.replace(/\s/g, '');
         // Remove todos os espaços do texto
     
+
+        // Verifica se algo foi digitado no campo de formulário.
         if (textValue) {
-            const convertedToWord = wordConvert(textValue);
-            
-            if(convertedToWord) {
-                return;
-            }
-            else {
-                const letterArray = textValue.split('');
-                letterConvert(letterArray);
-            }
+            // Separa cada letra do texto em um array (variável composta) onde cada posição desse array possui uma letra do texto
+            const letterArray = textValue.split('');
+
+            letterConvert(letterArray);
+            // Ativa a função de conversão de letras e envia todas as letras do texto.
         }
     }
 
     const translateButton = document.querySelector('.translate-button');
+    // Seleciona o botão de tradução e o armazena em uma constante.
+
     translateButton.addEventListener('click', formatText);
+    // Adiciona um evento de 'clique' ao botão de tradução. Ao ser clicado, aciona a função 'formatText'
 }
