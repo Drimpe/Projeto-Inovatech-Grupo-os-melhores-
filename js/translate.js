@@ -48,7 +48,7 @@ const alphabet = {
 
 /* 
     Como funciona o objeto? É por meio da associação chave-valor
-    O primeiro item é achave (letra), e o segundo item (valor) é um array(ou lista [])com dois sub-itens, onde o primeiro[0] é o endereço do gif e o segundo [1] é o tempo de duração em milissegundos.
+    O primeiro item é achave (letra), e o segundo item (valor) é um array(ou lista [])com dois sub-itens, onde o primeiro[0] é o endereço do gif (nas pastas) e o segundo [1] é o tempo de duração em milissegundos.
 
     Exemplo:
     alphabet['x'] → ['/js/libras/alfabeto/x.gif', 1950]
@@ -67,7 +67,7 @@ export default function Translate() {
         let gifDuration = 0;
         // Duração do gif é inicialmente definida em 0
 
-        // Laço de repetição (for) para percorrer cada letra do formulário
+        // Laço de repetição (for of) para percorrer cada letra do texto
         for (const letter of letterArray) {
 
             // Verifica se o endereço para a letra ATUAL existe no objeto de letras do alfabeto.
@@ -104,7 +104,7 @@ export default function Translate() {
             const letterArray = textValue.split('');
 
             letterConvert(letterArray);
-            // Ativa a função de conversão de letras e envia todas as letras do texto.
+            // Executa a função de conversão de letras e envia todas as letras do texto.
         }
     }
 
