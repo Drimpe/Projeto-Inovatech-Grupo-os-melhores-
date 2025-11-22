@@ -41,27 +41,45 @@ const alphabet = {
 }
 
 
+/* 
+    Como funciona o objeto? É por meio da associação chave-valor
+    O primeiro item é achave (letra), e o segundo item (valor) é um array(ou lista [])com dois sub-itens, onde o primeiro[0] é o endereço do gif e o segundo [1] é o tempo de duração em milissegundos.
+
+    Exemplo:
+    alphabet['x'] → ['/js/libras/alfabeto/x.gif', 1950]
+    alphabet['x'][0] → '/js/libras/alfabeto/x.gif'
+    alphabet['x'][1] →  1950
+*/
+
 export default function Translate() {
     const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
+
+
 
     // Função de conversão de letras para gifs
     async function letterConvert(letterArray) {
         const outputLibras = document.querySelector('.output-libras img');
         // Seleciona o campo de saída e o armazena em uma constante
 
-        // Duração do gif é inicialmente definida em 0
         let gifDuration = 0;
+        // Duração do gif é inicialmente definida em 0
 
         // Laço de repetição (for) para percorrer cada letra do formulário
         for (const letter of letterArray) {
-            const imageUrl = alphabet[letter][0];
 
+            // Verifica se o endereço para a letra ATUAL existe no objeto de letras do alfabeto.
+            const imageUrl = alphabet[letter][0];
             if (imageUrl) {
+
                 outputLibras.src = imageUrl;
+                // Se a letra existir, adicione o endereço do gif ao campo de saída
+
                 gifDuration = alphabet[letter][1];
+                // Adiciona a duração do gif selecionado
             }
             
             await delay(gifDuration);
+            // Espera o gif rodar antes de ir para a próxima letra.
         }
 
         outputLibras.src = '';
