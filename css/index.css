@@ -7,3 +7,6 @@
 @import './main.css';
 @import './swapScreen.css';
 @import './footer.css';
+
+
+/* Linka todos os arquivos CSS num único arquivo e carrega tudo no index.html */
