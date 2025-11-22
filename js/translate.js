@@ -97,7 +97,6 @@ export default function Translate() {
         textValue = textValue.replace(/\s/g, '');
         // Remove todos os espaços do texto
     
-
         // Verifica se algo foi digitado no campo de formulário.
         if (textValue) {
             // Separa cada letra do texto em um array (variável composta) onde cada posição desse array possui uma letra do texto

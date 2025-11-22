@@ -75,7 +75,7 @@ export default function speechRecognition() {
       recognition.onend = () => {
          isRecording = false;
 
-         // Todo o conteúdo volta ao seu estado anterior (o mesmo quando a página é carregada pela primeira vez)
+         // Todo o conteúdo volta ao seu estado anterior (antes da gravação)
          recButton.textContent = 'Nova gravação';
          recStatus.classList.remove('recording');
          recStatus.classList.add('waiting');
