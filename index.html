@@ -4,7 +4,7 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Voz Em Libras</title>
-   
+
    <link rel="stylesheet" href="./css/index.css">
    <!-- Carrega todos os estilos CSS -->
 
@@ -24,7 +24,11 @@
       </ul>
    </header>
    
+   
+   <!-- Conteúdo principal -->
    <main class="main"> 
+
+      <!-- Seção de gravação/texto -->
       <section class="recording-section">
          <h1>Gravação de Áudio</h1>
          <button class="rec-button button">Nova Gravação</button>
@@ -36,7 +40,6 @@
          <textarea name="rec-text" id="rec-text" class="rec-text" placeholder="Ex.: Eu vou para a casa com o gato"></textarea>
          <!-- Texto ou campo de formulário -->
 
-
          <div class="option-button">
             <button class="translate-button button">Traduzir</button>
             <!-- Botão de tradução/conversão -->
@@ -45,24 +48,33 @@
             <!-- Botão de limpar texto -->
          </div> 
          
+         
          <footer class="rec-tip">
             <p>Dica: fale, edite o texto se precisar e clique em <span>Traduzir</span>.</p>
          </footer>
          
       </section>
+      <!-- Fim da seção de gravação/texto -->
       
+
+      <!-- Seção de saída/resultado → gifs em libras -->
       <section class="output-libras-section">
          <button class="swap-button"></button>
 
          <h1>Tradução em Libras</h1>
 
-         <!-- Campo de saída: É aqui onde os gifs serão exibidos. -->
          <div class="output-libras">
+            <!-- Campo de saída: É aqui onde os gifs serão exibidos. -->
             <img src="" alt="">
+
          </div>
       </section>
+      <!-- Fim da seção de saída/resultado → gifs em libras -->
+      
    </main>
+   <!-- Fim do conteúdo principal -->
    
+
    <footer class="footer">
       <p>⚠ Observação: este site traduz a voz ou escrita do usuário para linguagem de libras para fins educacionais — não substitui o intérprete profissional!</p>
    </footer>

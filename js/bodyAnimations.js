@@ -1,4 +1,6 @@
 export default function bodyAnimation() {
+
+   // Ao carregar a página, o código abaixo exibe uma animação de entrada.
    window.onload = () => {
       const body = document.querySelector('body');
       const recordingSection = document.querySelector('.recording-section');
