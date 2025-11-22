@@ -1,3 +1,8 @@
+/* 
+
+PARA FACILITAR O SEU ENTENDIMENTO: 
+→ O CÓDIGO SEMPRE ESTÁ MANIPULANDO/ALTERANDO O ARQUIVO INDEX.HTML 
+*/
 
 // Objeto com o endereço de cada gif e sua respectiva duração (em milissegundos)
 const alphabet = {
@@ -53,8 +58,6 @@ const alphabet = {
 
 export default function Translate() {
     const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
-
-
 
     // Função de conversão de letras para gifs
     async function letterConvert(letterArray) {
