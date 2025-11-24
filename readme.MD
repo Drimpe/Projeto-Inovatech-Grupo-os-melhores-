@@ -17,6 +17,8 @@
 
    - O projeto irá abrir no navegador definido como padrão no seu sistema (Recomendo utilizarem o Google Chrome).
 
+   - Referências: https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer
+
 3. FUNCIONALIDADES:
 
    - Os arquivos responsáveis pela principal funcionalidade do projeto (conversão de voz/texto para gifs em libras) são os arquivos index.html (conteúdo da página), translate.js (tradução) e webSpeech.js (reconhecimento de voz).
