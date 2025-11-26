@@ -5,6 +5,8 @@
 
 2. COMO RODAR O PROJETO?
 
+   - Baixe a pasta do projeto a partir deste repositório clicando no botão verde logo acima "<> Code" → Download ZIP
+
    - Instale a extensão LIVE SERVER ou FIVE SERVER no seu Visual Studio Code (VSCODE)
 
    - Com o seu Visual Studio Code (VSCODE) aberto, abra a pasta do projeto a partir do VSCODE pressionando as teclas CTRL + K + O
