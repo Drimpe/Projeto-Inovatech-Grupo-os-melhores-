@@ -15,7 +15,7 @@
 
    - No menu à esquerda (pasta aberta) clique no arquivo index.html
 
-   - Clique no botão "Go Live" localizado no canto inferior direito do VSCODE
+   - Clique no botão "Go Live" localizado no canto inferior direito do VSCODE (se o botão não aparecer, feche e abra o VSCODE novamente)
 
    - Ou então, pressione as teclas ALT + L + O (Não esqueça de estar com o arquivo index.html aberto e selecionado no VSCODE)
 
