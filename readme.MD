@@ -7,6 +7,8 @@
 
    - Baixe a pasta do projeto a partir deste repositório clicando no botão verde logo acima "<> Code" → Download ZIP
 
+   - Após baixar, descompacte o arquivo .zip e abra o seu Visual Studio Code (VSCODE)
+
    - Instale a extensão LIVE SERVER ou FIVE SERVER no seu Visual Studio Code (VSCODE)
 
    - Com o seu Visual Studio Code (VSCODE) aberto, abra a pasta do projeto a partir do VSCODE pressionando as teclas CTRL + K + O
