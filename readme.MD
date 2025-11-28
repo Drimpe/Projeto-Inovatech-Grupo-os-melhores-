@@ -26,4 +26,11 @@
 3. FUNCIONALIDADES:
 
    - Os arquivos responsáveis pela principal funcionalidade do projeto (conversão de voz/texto para gifs em libras) são os arquivos index.html (conteúdo da página), translate.js (tradução) e webSpeech.js (reconhecimento de voz).
-   - Os arquivos .js estão localizados na pasta js
+   - Os arquivos .js estão localizados na pasta js.
+
+ 4. Atualizações Possiveis:
+   
+   - Adicionar IA para adicionar mais as traduções, para tornar o projeto mais rico.
+   - Adicionar a funcionalidade para que reconheça frases completas (sendo frases que a IA caso fosse criada, ela adiciona-se).
+   - Tornar o projeto em um programa ou APP para assim ser utilizado de forma offline.
+   - Modelos 3D originais (para não infringir direitos auorais, deve-se criar modelo 3D proprio).
