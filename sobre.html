@@ -6,6 +6,78 @@
    <title>Voz em Libras | Sobre</title>
 </head>
 <body>
-   
+   <!-- Seção: Sobre — Voz e Libras -->
+<section id="sobre-voz-libras" aria-labelledby="sobre-title" style="max-width:900px;margin:40px auto;padding:20px;">
+  <style>
+    #sobre-voz-libras { font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, Arial; color:#0f1724; background:transparent; }
+    #sobre-voz-libras .card{background:#19dc23;border-radius:12px;padding:22px;box-shadow:0 6px 20px rgba(11,118,239,0.06)}
+    #sobre-voz-libras h1{font-size:24px;margin:0 0 8px}
+    #sobre-voz-libras p.lead{color:#6b7280;margin:0 0 12px}
+    #sobre-voz-libras .features{display:flex;gap:12px;flex-wrap:wrap;margin-top:12px}
+    #sobre-voz-libras .feature{flex:1 1 200px;background:#fbfdff;border:1px solid #eef4ff;padding:10px;border-radius:8px}
+    #sobre-voz-libras .cta{margin-top:16px}
+    #sobre-voz-libras .muted{color:#6b7280;font-size:13px}
+  </style>
+
+  <div class="card">
+    <header>
+      <h1 id="sobre-title">Sobre — Voz e Libras</h1>
+      <p class="lead">
+        O <strong>Voz e Libras</strong> facilita a comunicação entre surdos e ouvintes convertendo fala ou texto em Libras (Língua Brasileira de Sinais),
+        por meio de transcrição e apresentação de sinais (vídeos, ícones ou descrições).
+      </p>
+    </header>
+
+    <section aria-labelledby="como-funciona" style="margin-top:10px;">
+      <h2 id="como-funciona" style="font-size:16px;margin:0 0 8px">Como funciona</h2>
+      <p class="muted">
+        Você pode falar ao microfone ou digitar. O sistema transforma o áudio em texto e então mapeia para sinais em Libras exibidos ao usuário.
+      </p>
+
+      <div class="features" aria-hidden="false">
+        <div class="feature">
+          <strong>Entrada por voz</strong>
+          <div class="muted" style="margin-top:6px">Reconhecimento de fala (speech-to-text) para capturar o conteúdo.</div>
+        </div>
+
+        <div class="feature">
+          <strong>Entrada por texto</strong>
+          <div class="muted" style="margin-top:6px">Cole ou digite frases e receba a tradução em Libras.</div>
+        </div>
+
+        <div class="feature">
+          <strong>Exibição em Libras</strong>
+          <div class="muted" style="margin-top:6px">Vídeos/ícones e descrições textuais dos sinais.</div>
+        </div>
+
+        <div class="feature">
+          <strong>Acessibilidade</strong>
+          <div class="muted" style="margin-top:6px">Interface pensada para fácil uso e contraste adequado.</div>
+        </div>
+      </div>
+    </section>
+
+    <section style="margin-top:12px;">
+      <p class="muted"><em>Observação:</em> para tradução em tempo real é necessário integrar um motor de reconhecimento de fala e uma base de sinais (vídeos/ânimações).</p>
+    </section>
+
+    <div class="cta">
+      
+    </div>
+  </div>
+</section>
+
 </body>
 </html>
+<button onclick="history.back()" 
+        style="
+          padding:10px 16px;
+          background:#0b76ef;
+          color:rgb(248, 246, 246);
+          border:none;
+          border-radius:8px;
+          cursor:pointer;
+          font-size:14px;
+        ">
+  ← Voltar
+</button>
